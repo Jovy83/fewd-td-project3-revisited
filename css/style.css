@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 a {
@@ -95,29 +95,81 @@ legend {
 	margin-bottom: 2rem;
 }
 
-.flex {
-	display: flex;
-	flex-direction: column;
+label {
+	display: inline-block;
+	margin-bottom: 1rem;
 }
 
-label {
-	margin-bottom: 1rem;
+input#name::placeholder,
+input#email::placeholder {
+  text-align: right;
+  font-style: italic;
+  font-size: .9em;
+  padding-right: .5em;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #c5c5c5;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-select {
+select,
+textarea {
 	padding: 1rem;
 	background-color: rgba(239, 240, 241, 1);
 	border: 3px solid transparent;
-	  /* transition: all 0.5s ease; */
+	transition: all 0.5s ease;
 	margin-bottom: 1.2rem;
-	  
+	width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+	outline: none;
+	border: 3px solid #46698B;
+  	background: #FFFFCC;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 .rounded {
-	border-radius: 0.3125em;
+	border-radius: 0.3125rem;
+}
+
+.block {
+	display: block;
+}
+
+.block ~ .block {
+	margin-top: 1.2rem; /* this is to separate the checkbox section from the radio section */
+}
+
+textarea {
+	resize: none;
+	line-height: 1.6;
+}
+
+button[type="submit"] {
+	width: 100%;
+	padding: 1rem;
+	margin-bottom: 3rem;
+	color: white;
+	background-color: rgb(69, 178, 172);
+}
+
+footer {
+	text-align: center;
+	margin-bottom: 5rem;
 }
 
 /* ================================= 
@@ -125,5 +177,8 @@ select {
 ==================================== */
 
 @media (min-width: 768px) {
-	
+	.flex {
+		display: flex;
+		flex-direction: column;
+	}
 }

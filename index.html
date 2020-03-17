@@ -30,27 +30,27 @@
                             
                             <div class="flex">
                                 <label for="name">Full Name</label>
-                                <input class="rounded" type="text" id="name" name="full_name" value="" required>
+                                <input class="rounded" type="text" id="name" name="full_name" value="" placeholder="Required" required>
                             </div>
                             
                             <div class="flex">    
                                 <label for="email">Email Address</label>
-                                <input class="rounded" type="email" id="email" name="email_address" value="" required>
+                                <input class="rounded" type="email" id="email" name="email_address" value="" placeholder="Required" required>
                             </div>
 
                             <div class="flex">    
                                 <label for="phone">Phone Number</label>
-                                <input class="rounded" type="tel" id="phone" name="phone_number" value="">
+                                <input class="rounded" type="tel" id="phone" name="phone_number" value="" placeholder="123-123-1234">
                             </div>
 
                             <div class="flex">    
                                 <label for="address">Street Address</label>
-                                <input class="rounded" type="text" id="address" name="street_address" value="">
+                                <input class="rounded" type="text" id="address" name="street_address" value="" placeholder="123 Some St.">
                             </div>
                                 
                             <div class="flex">    
                                 <label for="city">City</label>
-                                <input class="rounded" type="text" id="city" name="city" value="">
+                                <input class="rounded" type="text" id="city" name="city" value="" placeholder="Pasig">
                             </div>
 
                             <div class="flex">    
@@ -119,41 +119,48 @@
                         </fieldset>
     
                         <fieldset class="lower">
-                            <legend><span class="legend">Newsletter</span></legend>
+                            <legend>Newsletter</legend>
                             
-                            <label>Select the newsletters you would like to receive</label>
+                            <label class="block">Select the newsletters you would like to receive</label>
     
                             <input type="checkbox" id="html_news" name="newsletter_type" value="html_news">
                             <label for="html_news">HTML News</label>
+
+                            <br>
     
                             <input type="checkbox" id="css_news" name="newsletter_type" value="css_news">
                             <label for="css_news">CSS News</label>
+
+                            <br>
     
                             <input type="checkbox" id="javavscript_news" name="newsletter_type" value="javavscript_news">
                             <label for="javavscript_news">Javascript News</label>
     
-    
-                            <label>Newsletter format</label>
+                            <label class="block">Newsletter format</label>
     
                             <input type="radio" id="html_format" name="newsletter_format" value="html_format">
                             <label for="html_format">HTML</label>
+
+                            <br>
     
                             <input type="radio" id="plaintext_format" name="newsletter_format" value="plaintext_format">
                             <label for="plaintext_format">Plain text</label>
+
+                            <br>
     
-                            <label for="feedback">Other topics you'd like to hear about</label>
-                            <textarea id="feedback" name="user_feedback"></textarea>
+                            <label class="block" for="feedback">Other topics you'd like to hear about</label>
+                            <textarea class="rounded" id="feedback" name="user_feedback" rows="5" placeholder="What other programming languages are you interested in? We'd love to hear from you!""></textarea>
     
                         </fieldset>
     
-                        <button type="submit" name="button">Sign Up</button>
+                        <button class="rounded" type="submit" name="button">Sign Up</button>
                     </form>
                 </div>
             </div>
         </main>
 
         <footer>
-            <p>Copyright The Code Review</p>
+            <p class="copyright">Copyright The Code Review</p>
         </footer>
     </body>
 </html>
